@@ -77,7 +77,7 @@ _TYPE_TO_ICONS = {
 
 _ACCEPTANCE_TO_TIPS = {
     "PENDING_DEPLOY": "Deploy is ongoing, qualification is not started yet",
-    "OUTSTANDING": "Depoly is waiting to be qualified",
+    "OUTSTANDING": "Deploy is waiting to be qualified",
     "PENDING_ACCEPT": "Deploy is being qualified",
     "ACCEPTED": "Deploy is qualified",
     "REJECTED": "Deploy failed to be qualified",

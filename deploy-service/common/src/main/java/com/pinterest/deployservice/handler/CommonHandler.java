@@ -270,7 +270,7 @@ public class CommonHandler {
                 updateScheduleBean.setId(schedule.getId());
                 if (totalSessions == currentSession) {
                     updateScheduleBean.setState(ScheduleState.FINAL);
-                    LOG.debug("Env {} is now going into final deloy stage and will deploy on the rest of all of the hosts.", envBean.getEnv_id());
+                    LOG.debug("Env {} is now going into final deploy stage and will deploy on the rest of all of the hosts.", envBean.getEnv_id());
                 } else {
                     updateScheduleBean.setState(ScheduleState.RUNNING);
                     updateScheduleBean.setCurrent_session(currentSession+1);

@@ -155,8 +155,8 @@
             $('#confirmBranchInputId').val(branch);
             $('#confirmBuildIdInputId').val(buildId);
             if (branch.startsWith("hotfix")) {
-                $('#confirmDeplyDescId').prop('required', true);
-                $('#confirmDeplyDescId').prop('placeholder',
+                $('#confirmDeployDescId').prop('required', true);
+                $('#confirmDeployDescId').prop('placeholder',
                     'Simple description of this deploy (required for hotfix)');
             }
             if(buildId == null) {
