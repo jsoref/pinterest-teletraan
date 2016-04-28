@@ -74,7 +74,7 @@ public class EnvTokenRoles extends TokenRoles {
     @PUT
     @Path("/{scriptName : [a-zA-Z0-9\\-_]+}")
     @ApiOperation(
-            value = "Update an envrionment's script token",
+            value = "Update an environment's script token",
             notes = "Update a specific environment script token given environment and script names.")
     @RolesAllowed(TeletraanPrincipalRole.Names.WRITE)
     @ResourceAuthZInfo(type = AuthZResource.Type.ENV, idLocation = ResourceAuthZInfo.Location.PATH)

@@ -110,7 +110,7 @@ Returns a TokenRoles object given a script and environment name.
 
 
 <a name="update_12"></a>
-#### Update an envrionment's script token
+#### Update an environment's script token
 ```
 PUT /v1/envs/{envName}/token_roles/{scriptName}
 ```
