@@ -197,7 +197,7 @@ workers:
       initialDelay: 2
       period: 5
 
-# Ping Requst validators:
+# Ping Request validators:
 # pingrequestvalidators:
 #  -  com.pinterest.deployservice.pingrequests.Ec2InstanceValidator
 
