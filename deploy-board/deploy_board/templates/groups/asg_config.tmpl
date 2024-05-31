@@ -31,7 +31,7 @@
                     original-min-size="{{ asg.minSize }}" original-max-size="{{ asg.maxSize }}" current-size="{{ group_size }}"
                     label-bootstrap-class="col-xs-2" input-bootstrap-class="col-xs-4"
                     label-title="Capacity (Current size is {{ group_size }})"
-                    label-text="Minimun and maximum number of hosts in one autoscaling group"
+                    label-text="Minimum and maximum number of hosts in one autoscaling group"
                     :remaining-capacity="remainingCapacity" :placements="placements">
                 </asg-capacity-config>
 
