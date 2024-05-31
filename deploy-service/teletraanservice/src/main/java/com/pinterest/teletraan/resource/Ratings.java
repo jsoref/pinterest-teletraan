@@ -72,7 +72,7 @@ public class Ratings {
     @Path("/{userName : [a-zA-Z0-9\\-_.]+}/is_eligible")
     public Boolean checkUserFeedbackStatus(@PathParam("userName") String userName)
             throws Exception {
-        return ratingsHandler.checkUserFeebackStatus(userName);
+        return ratingsHandler.checkUserFeedbackStatus(userName);
     }
 
     @DELETE
