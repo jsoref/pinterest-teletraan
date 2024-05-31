@@ -325,7 +325,7 @@ public class PingHandler {
         if (connection != null) {
             LOG.info("Successfully get lock on {}", deployLockName);
             try {
-                LOG.debug("Got lock on behavor of host {} for env {}, verify active agents", host, envId);
+                LOG.debug("Got lock on behavior of host {} for env {}, verify active agents", host, envId);
                 long totalActiveAgents = (isAgentCountValid(envId, agentCountBean) == true) ? agentCountBean.getActive_count() : agentDAO.countDeployingAgent(envId);
                 if (totalActiveAgents >= parallelThreshold) {
                     LOG.debug("Env {}: active agents {}, parallel threshold {}. host {} will wait for deploy", envId, totalActiveAgents, parallelThreshold, host);
