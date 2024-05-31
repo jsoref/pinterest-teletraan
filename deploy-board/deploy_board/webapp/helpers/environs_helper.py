@@ -272,9 +272,9 @@ def get_config_history(request, env_name, stage_name, index, size):
 
 
 def set_active_max_parallel(env):
-    max_parallel_pecentage = int(env['maxParallelPct'])
+    max_parallel_percentage = int(env['maxParallelPct'])
     env['showNumber'] = True
-    if max_parallel_pecentage > 0:
+    if max_parallel_percentage > 0:
         env['showNumber'] = False
 
 
