@@ -516,7 +516,7 @@ def warnIfOld(timestamp):
 @register.filter("commitRepoType")
 def commitRepoType(repo):
     if "/" in repo:
-        return "Github"
+        return "GitHub"
     else:
         return "Phabricator"
 

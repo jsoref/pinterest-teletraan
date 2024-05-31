@@ -81,7 +81,7 @@ public class CommonUtils {
 
     public static String determineScm(String repo) {
         if(repo.contains("/")) {
-            return "Github";
+            return "GitHub";
         }
         else {
             return "Phabricator";

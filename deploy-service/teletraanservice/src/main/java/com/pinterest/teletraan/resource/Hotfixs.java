@@ -93,7 +93,7 @@ public class Hotfixs {
     private String generateJobName(String repo) {
         String[] repoSplit = repo.split("/");
         if (repoSplit.length > 1) {
-            // Special case for Github repo to extract repo name from org
+            // Special case for GitHub repo to extract repo name from org
             repo = repoSplit[1];
         }
         return String.format("%s-hotfix-job", repo);

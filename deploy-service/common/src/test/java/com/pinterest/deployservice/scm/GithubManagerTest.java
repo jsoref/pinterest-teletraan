@@ -18,7 +18,7 @@ public class GithubManagerTest {
 
     @Before
     public void setUp() throws Exception {
-        String typeName = "Github";
+        String typeName = "GitHub";
         String apiPrefix = "https://api.github.com";
         String urlPrefix = "https://github.com";
         String appId = "yourAppId";
