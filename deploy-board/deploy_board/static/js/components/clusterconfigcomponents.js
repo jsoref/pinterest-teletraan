@@ -405,7 +405,7 @@ Vue.component("aws-config-modal", {
     }
 });
 
-Vue.component('hostype-help', {
+Vue.component('hosttype-help', {
     template: '<help-table v-bind:headers="headers" v-bind:data="data" v-bind:keys="keys" ></help-table>',
     props: ['data'],
     data: function () {
