@@ -38,9 +38,9 @@ Vue.component('side-button-nolink', {
  */
 Vue.component('modal-panel-heading-button', {
   template: '<button type="button" class="deployToolTip btn btn-default btn-sm" data-toggle="modal"\
-   v-bind:data-target="confirmDiaglog" v-bind:title="title" ><span v-bind:class="styleclass"></span> {{text}}\
+   v-bind:data-target="confirmDialog" v-bind:title="title" ><span v-bind:class="styleclass"></span> {{text}}\
     </button>',
-  props: ['confirmDiaglog', 'title', 'text', 'styleclass']
+  props: ['confirmDialog', 'title', 'text', 'styleclass']
 });
 
 /**
@@ -48,11 +48,11 @@ Vue.component('modal-panel-heading-button', {
  */
 Vue.component('side-button-modal-confirm', {
   template: '<div class="row">\
-    <button class="deployToolTip btn btn-default btn-block" v-bind:data-target="confirmDiaglog"\
+    <button class="deployToolTip btn btn-default btn-block" v-bind:data-target="confirmDialog"\
         data-toggle="modal" v-bind:title="title">\
         <span v-bind:class="styleclass"></span> {{text}} \
     </button></div>',
-  props: ['confirmDiaglog', 'title', 'text', 'styleclass']
+  props: ['confirmDialog', 'title', 'text', 'styleclass']
 }
 );
 

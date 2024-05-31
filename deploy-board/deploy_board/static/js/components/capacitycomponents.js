@@ -8,7 +8,7 @@
  */
 Vue.component('delete-cluster', {
     template: '<div v-show="showdelete">\
-    <side-button-modal-confirm confirmDiaglog="#deleteClusterDialogId" \
+    <side-button-modal-confirm confirmDialog="#deleteClusterDialogId" \
         text="Delete Cluster" title="Delete Cluster" styleclass="glyphicon glyphicon-remove-sign">\
     </side-button-modal-confirm>\
     <modal title="Delete Cluster Confirm" id="deleteClusterDialogId" v-on:input="clickDialog">\
@@ -30,7 +30,7 @@ Vue.component('delete-cluster', {
  */
 Vue.component('clone-cluster', {
     template: '<div v-show="showclone">\
-    <side-button-modal-confirm confirmDiaglog="#cloneClusterDialogId" \
+    <side-button-modal-confirm confirmDialog="#cloneClusterDialogId" \
         text="Clone Cluster" title="Clone Cluster" styleclass="glyphicon glyphicon-file">\
     </side-button-modal-confirm>\
     <modal title="Clone Cluster Confirm" id="cloneClusterDialogId" v-on:input="clickDialog">\
