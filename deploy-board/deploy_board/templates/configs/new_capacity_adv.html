@@ -574,7 +574,7 @@ var capacitySetting = new Vue({
 
             var host_type = capacityCreationInfo.hostTypes?.find(hostType => hostType.id === clusterInfo['hostType']);
             if (!host_type || hostTypes.isDisabledHostType(host_type)) {
-                globalNotificationBanner.error = "Host type must not be retired or decomissioned";
+                globalNotificationBanner.error = "Host type must not be retired or decommissioned";
                 return false;
             }
 
