@@ -202,7 +202,7 @@ class Client(BaseClient):
                  self._agent_version, self._autoscaling_group, self._availability_zone, self._ec2_tags, self._stage_type, self._hostgroup, self._account_id))
 
         if not self._availability_zone:
-            log.error("Fail to read host info: availablity zone")
+            log.error("Fail to read host info: availability zone")
             create_sc_increment(name='deploy.failed.agent.hostinfocollection',
                                 tags={'host': self._hostname, 'info': 'availability_zone'})
             return False

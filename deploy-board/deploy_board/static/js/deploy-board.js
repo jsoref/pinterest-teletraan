@@ -164,7 +164,7 @@ function getDefaultPlacement(capacityCreationInfo) {
     //   us_east_1d = [{subnet5:90}, {subnet6:20}]
     //   us_east_1e = [{subnet7:120}, {subnet8:30}]
     //   It will pick subnet1, subnet5 and subnet7
-    //   Also besides availablity zone, we grouped by public ip or not
+    //   Also besides availability zone, we grouped by public ip or not
 
     $.each(this.capacityCreationInfo.placements, function (index, item) {
         if (item.assign_public_ip) {
