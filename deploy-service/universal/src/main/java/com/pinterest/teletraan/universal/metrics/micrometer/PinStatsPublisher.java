@@ -33,7 +33,7 @@ import reactor.core.publisher.Mono;
 import reactor.netty.Connection;
 import reactor.netty.tcp.TcpClient;
 
-// Most of the code is derived from from OpenTSDBMeterRegistry
+// Most of the code is derived from OpenTSDBMeterRegistry
 // https://github.com/micrometer-metrics/micrometer/blob/c959eb3e7629363080c4628e70b31f28d044ef3c/implementations/micrometer-registry-opentsdb/src/main/java/io/micrometer/opentsdb/OpenTSDBMeterRegistry.java
 @AllArgsConstructor
 public class PinStatsPublisher {
