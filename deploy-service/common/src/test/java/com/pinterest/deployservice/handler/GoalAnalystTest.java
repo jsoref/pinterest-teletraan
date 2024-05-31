@@ -1027,7 +1027,7 @@ public class GoalAnalystTest {
     }
 
     @Test
-    public void testFianlStopStage() throws Exception {
+    public void testFinalStopStage() throws Exception {
         EnvironBean environBean = genDefaultEnvBean();
         envs.put(environBean.getEnv_id(), environBean);
         AgentBean agentBean = genDefaultAgent();
