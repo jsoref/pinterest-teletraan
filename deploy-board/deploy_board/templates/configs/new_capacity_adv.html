@@ -267,10 +267,10 @@ var capacitySetting = new Vue({
         },
         getHelpInfo: function(path, onSuccess, params){
             const searchParams = new URLSearchParams(params);
-            const seachParamStr = params != null ? `?${searchParams}` : '';
+            const searchParamStr = params != null ? `?${searchParams}` : '';
             $.ajax({
                 type: 'GET',
-                url: `${location.protocol}//${location.host}/clouds/${path}/${seachParamStr}`,
+                url: `${location.protocol}//${location.host}/clouds/${path}/${searchParamStr}`,
                 dataType: "json",
                 beforeSend: function(xhr, settings) {
                     var csrftoken = getCookie('csrftoken')
