@@ -167,19 +167,19 @@ public class EnvDeploys {
                 agentBean.setState(AgentState.PAUSED_BY_USER);
                 agentBean.setLast_update(System.currentTimeMillis());
                 agentDAO.updateMultiple(hostIds, envBean.getEnv_id(), agentBean);
-                LOG.info("Succesfully paused hosts in environment {} and stage {}", envName, stageName);
+                LOG.info("Successfully paused hosts in environment {} and stage {}", envName, stageName);
                 break;
             case RESET:
                 agentBean.setState(AgentState.RESET);
                 agentBean.setLast_update(System.currentTimeMillis());
                 agentDAO.updateMultiple(hostIds, envBean.getEnv_id(), agentBean);
-                LOG.info("Succesfully reset hosts in environment {} and stage {}", envName, stageName);
+                LOG.info("Successfully reset hosts in environment {} and stage {}", envName, stageName);
                 break;
             case NORMAL:
                 agentBean.setState(AgentState.NORMAL);
                 agentBean.setLast_update(System.currentTimeMillis());
                 agentDAO.updateMultiple(hostIds, envBean.getEnv_id(), agentBean);
-                LOG.info("Succesfully resumed hosts in environment {} and stage {}", envName, stageName);
+                LOG.info("Successfully resumed hosts in environment {} and stage {}", envName, stageName);
                 break;
             default:
                 throw new WebApplicationException("No action found.", Response.Status.BAD_REQUEST);

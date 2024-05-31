@@ -399,7 +399,7 @@ public class EnvironHandler {
         if (total > 0) {
             throw new DeployInternalException("Reject the delete of env %s while there are still %d hosts active", envId, total);
         }
-        // TODO make the following transcational
+        // TODO make the following transactional
         environDAO.delete(envId);
         promoteDAO.delete(envId);
         if (envBean.getAdv_config_id() != null) {

@@ -217,7 +217,7 @@ class Config(object):
     def get_subprocess_terminate_timeout(self) -> int:
         return self.get_intvar('termination_timeout', 30)
 
-    def get_subproces_max_retry(self) -> int:
+    def get_subprocess_max_retry(self) -> int:
         return self.get_intvar('max_retry', 3)
 
     def get_subprocess_max_log_bytes(self) -> int:

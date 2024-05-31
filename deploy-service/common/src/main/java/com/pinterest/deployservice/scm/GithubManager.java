@@ -74,8 +74,8 @@ public class GithubManager extends BaseManager {
                 knoxKey.init(this.githubAppPrivateKeyKnox);
                 String githubAppPrivateKey = knoxKey.getKey();
                 if (StringUtils.isEmpty(githubAppPrivateKey)) {
-                    LOG.error("Failed to get Github Knox key");
-                    throw new IllegalArgumentException("Failed to get Github Knox key");
+                    LOG.error("Failed to get GitHub Knox key");
+                    throw new IllegalArgumentException("Failed to get GitHub Knox key");
                 }
 
                 // generate jwt token by signing with GitHub app id and private key
@@ -90,7 +90,7 @@ public class GithubManager extends BaseManager {
                 this.headers.put("Authorization", String.format("Token %s", appInstallationToken.getToken()));
             } catch (Exception e) {
                 // e.printStackTrace();
-                LOG.error("Exception when getting Github token: ", e);
+                LOG.error("Exception when getting GitHub token: ", e);
                 throw e;
             }
         }
@@ -123,8 +123,8 @@ public class GithubManager extends BaseManager {
     }
 
     private long getDate(Map<String, Object> jsonMap) {
-        Map<String, Object> commiterMap = (Map<String, Object>) jsonMap.get("committer");
-        String dateGMTStr = (String) commiterMap.get("date");
+        Map<String, Object> committerMap = (Map<String, Object>) jsonMap.get("committer");
+        String dateGMTStr = (String) committerMap.get("date");
         DateTimeFormatter parser = ISODateTimeFormat.dateTimeNoMillis();
         DateTime dt = parser.parseDateTime(dateGMTStr);
         return dt.getMillis();

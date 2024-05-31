@@ -66,7 +66,7 @@ def get_user_token(request, name, user_name):
 
 def update_users_config(request, name):
     user_types = request.GET.get('user_types')
-    # First, retrive all the original users
+    # First, retrieve all the original users
     origin_user_dict = {}
     for key, value in request.POST.items():
         if key.startswith('TELETRAAN_ORIGIN_'):

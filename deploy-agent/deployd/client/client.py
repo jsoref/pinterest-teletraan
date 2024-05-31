@@ -202,7 +202,7 @@ class Client(BaseClient):
                  self._agent_version, self._autoscaling_group, self._availability_zone, self._ec2_tags, self._stage_type, self._hostgroup, self._account_id))
 
         if not self._availability_zone:
-            log.error("Fail to read host info: availablity zone")
+            log.error("Fail to read host info: availability zone")
             create_sc_increment(name='deploy.failed.agent.hostinfocollection',
                                 tags={'host': self._hostname, 'info': 'availability_zone'})
             return False
@@ -217,7 +217,7 @@ class Client(BaseClient):
                     if isinstance(report.errorMessage, bytes):
                         report.errorMessage = report.errorMessage.decode('utf-8')
 
-                    # We ignore non-ascii charater for now, we should further solve this problem on
+                    # We ignore non-ascii character for now, we should further solve this problem on
                     # the server side:
                     # https://app.asana.com/0/11815463290546/40714916594784
                     if report.errorMessage:

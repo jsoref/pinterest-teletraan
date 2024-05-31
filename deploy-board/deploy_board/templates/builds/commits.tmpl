@@ -35,7 +35,7 @@
                 $('#commitsTableId tr').last().after(data.rows);
                 $("#hiddenStartShaId").val(data.new_start_sha);
             },
-            error: function(xhr) { // if error occured
+            error: function(xhr) { // if error occurred
                 $(btn).button('reset');
                 alert(xhr.statusText + xhr.responseText);
             },

@@ -34,7 +34,7 @@ public class AutoRollbackAction extends AlertAction {
             new Interval(DateTime.now().minusDays(MaxLookbackDays),
                 DateTime.now().minusSeconds(actionWindowInSeconds)),
             MaxDeploysToCheck, true);
-    //Result sorted desending on start date
+    //Result sorted descending on start date
     if (candidates.size() > 0) {
       try {
         LOG.info("AutoRollback environ {} stage {} to {}", environ.getEnv_name(),

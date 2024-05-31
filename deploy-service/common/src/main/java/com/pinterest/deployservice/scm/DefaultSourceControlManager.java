@@ -42,7 +42,7 @@ public class DefaultSourceControlManager implements SourceControlManager {
 
     @Override
     public String getTypeName() {
-        return "UNKOWN";
+        return "UNKNOWN";
     }
 
     @Override

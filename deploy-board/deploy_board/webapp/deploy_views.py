@@ -89,9 +89,9 @@ def get_landing_page(request):
     })
 
 def get_ongoing_sidecar_deploys(request):
-    deploy_summeries = _get_ongoing_sidecar_deploys(request)
+    deploy_summaries = _get_ongoing_sidecar_deploys(request)
     html = render_to_string('deploys/ongoing_deploys.tmpl', {
-        "deploy_summaries": deploy_summeries,
+        "deploy_summaries": deploy_summaries,
         "pageIndex": 1,
         "pageSize": 100,
         "disablePrevious": True,
@@ -102,13 +102,13 @@ def get_ongoing_sidecar_deploys(request):
 def get_ongoing_deploys(request):
     index = int(request.GET.get('page_index', '1'))
     size = int(request.GET.get('page_size', DEFAULT_ONGOING_DEPLOY_SIZE))
-    deploy_summeries = _get_ongoing_deploys(request, index, size)
+    deploy_summaries = _get_ongoing_deploys(request, index, size)
     html = render_to_string('deploys/ongoing_deploys.tmpl', {
-        "deploy_summaries": deploy_summeries,
+        "deploy_summaries": deploy_summaries,
         "pageIndex": index,
         "pageSize": size,
         "disablePrevious": index <= 1,
-        "disableNext": len(deploy_summeries) < DEFAULT_ONGOING_DEPLOY_SIZE,
+        "disableNext": len(deploy_summaries) < DEFAULT_ONGOING_DEPLOY_SIZE,
     })
     return HttpResponse(html)
 

@@ -307,7 +307,7 @@ public class PingHandler {
         }
 
         // Make sure we also follow the schedule if specified
-        if (!canDeploywithSchedule(envBean)) {
+        if (!canDeployWithSchedule(envBean)) {
             LOG.debug("Env {}: schedule does not allow host {} to proceed.", envId, host);
             return false;
         }
@@ -325,14 +325,14 @@ public class PingHandler {
         if (connection != null) {
             LOG.info("Successfully get lock on {}", deployLockName);
             try {
-                LOG.debug("Got lock on behavor of host {} for env {}, verify active agents", host, envId);
+                LOG.debug("Got lock on behavior of host {} for env {}, verify active agents", host, envId);
                 long totalActiveAgents = (isAgentCountValid(envId, agentCountBean) == true) ? agentCountBean.getActive_count() : agentDAO.countDeployingAgent(envId);
                 if (totalActiveAgents >= parallelThreshold) {
                     LOG.debug("Env {}: active agents {}, parallel threshold {}. host {} will wait for deploy", envId, totalActiveAgents, parallelThreshold, host);
                     return false;
                 }
                 // Make sure again we also follow the schedule if specified
-                if (!canDeploywithSchedule(envBean)) {
+                if (!canDeployWithSchedule(envBean)) {
                     LOG.debug("Env {}: schedule does not allow host {} to proceed.", envId, host);
                     return false;
                 }
@@ -415,7 +415,7 @@ public class PingHandler {
             LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} waiting for deploy, current {} deploying hosts",
                 envId, tagName, tagValue, hostId, totalActiveAgentsWithHostTag);
             if (totalActiveAgentsWithHostTag >= maxParallelWithHostTag) {
-                LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} can not deploy, {} already exceed {} for constraint = {}, return false",
+                LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} cannot deploy, {} already exceed {} for constraint = {}, return false",
                     envId, tagName, tagValue, hostId, totalActiveAgentsWithHostTag, maxParallelWithHostTag, deployConstraintBean.toString());
                 return false;
             }
@@ -427,7 +427,7 @@ public class PingHandler {
                     long totalExistingHostsWithPrerequisiteTags = hostTagDAO.countHostsByEnvIdAndTags(envBean.getEnv_id(), tagName, prerequisiteTagValues);
                     long totalFinishedAgentsWithPrerequisiteTags = agentDAO.countFinishedAgentsByDeployWithHostTags(envBean.getEnv_id(), envBean.getDeploy_id(), tagName, prerequisiteTagValues);
                     if(totalFinishedAgentsWithPrerequisiteTags < totalExistingHostsWithPrerequisiteTags) {
-                        LOG.info("DeployWithConstraint env {} with tag {}:{} : prerequisite tags {} has not finish: finished {} < existing {}, host {} can not deploy.",
+                        LOG.info("DeployWithConstraint env {} with tag {}:{} : prerequisite tags {} has not finish: finished {} < existing {}, host {} cannot deploy.",
                             envId, tagName, tagValue, prerequisiteTagValues, totalFinishedAgentsWithPrerequisiteTags, totalExistingHostsWithPrerequisiteTags, hostId);
                         return false;
                     }
@@ -443,7 +443,7 @@ public class PingHandler {
         }
     }
 
-    boolean canDeploywithSchedule(EnvironBean env) throws Exception {
+    boolean canDeployWithSchedule(EnvironBean env) throws Exception {
         String scheduleId = env.getSchedule_id();
         if (scheduleId == null) {
             return true;
@@ -541,7 +541,7 @@ public class PingHandler {
         String hostId = pingRequest.getHostId();
         if (StringUtils.isEmpty(hostId)) {
             LOG.error("Missing host id in request: ", pingRequest);
-            throw new DeployInternalException("Missing host id in PingReqest");
+            throw new DeployInternalException("Missing host id in PingRequest");
         }
 
         if (StringUtils.isEmpty(pingRequest.getHostName())) {
@@ -698,7 +698,7 @@ public class PingHandler {
                     LOG.debug("Checking if host {}, updateBean = {}, rate_limited = {}, system_priority = {} can deploy",
                                 hostName, updateBean, rate_limited, env.getSystem_priority());
                     // Request has hit LWM rate-limit. we already updated heartbeat. 
-                    // Next, see if we can handle light-weight deploys, instead of completly discarding request.
+                    // Next, see if we can handle light-weight deploys, instead of completely discarding request.
                     // Idea is, 
                     // 1. we want to continue in-progress deploy.
                     // 2. delay starting new deploy on the host(canDeploy call below is expensive for services with system priority).
@@ -828,11 +828,11 @@ public class PingHandler {
             if (scriptConfigId != null) {
                 Map<String, String> variables = dataHandler.getMapById(scriptConfigId);
                 goal.setScriptVariables(variables);
-                LOG.debug("Add script varibles {} to goal at {} stage", variables, updateBean.getDeploy_stage());
+                LOG.debug("Add script variables {} to goal at {} stage", variables, updateBean.getDeploy_stage());
             }
         }
 
-        // Pass step specfic agent configurations
+        // Pass step specific agent configurations
         Map<String, String> configs = null;
         String agentConfigId = envBean.getAdv_config_id();
         if (agentConfigId != null) {
@@ -904,7 +904,7 @@ public class PingHandler {
     public final static int getFinalMaxParallelCount(EnvironBean environBean, long totalHosts) throws Exception {
 
         int ret = Constants.DEFAULT_MAX_PARALLEL_HOSTS;
-        LOG.debug("Get final maximum parallel count for total capactiy {}", totalHosts);
+        LOG.debug("Get final maximum parallel count for total capacity {}", totalHosts);
         boolean numIsApplicable = isApplicable(environBean.getMax_parallel());
         boolean percentageIsApplicable = isApplicable(environBean.getMax_parallel_pct());
 

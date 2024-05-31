@@ -20,7 +20,7 @@ package com.pinterest.deployservice.bean;
 /**
  * A wrapper class combining build and tag. It serves two purpose:
  * 1. An in memory representation of a Tagging build.
- * 2. The return result for the service endpoing /tags/builds. That is identical to /builds
+ * 2. The return result for the service endpoint /tags/builds. That is identical to /builds
  * but put the tagging info on the builds
  */
 public class BuildTagBean {

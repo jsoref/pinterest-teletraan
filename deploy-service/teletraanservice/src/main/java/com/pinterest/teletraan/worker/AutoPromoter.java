@@ -223,9 +223,9 @@ public class AutoPromoter implements Runnable {
             return true;
         }
 
-        // Otherwise, the deploy can not be retired or replaced
+        // Otherwise, the deploy cannot be retired or replaced
         // This is mostly when deploy is running, or succeeding but wait for test results
-        // TODO why we can not override current deploy when it is running or waiting for tests
+        // TODO why we cannot override current deploy when it is running or waiting for tests
         return false;
     }
 
@@ -349,7 +349,7 @@ public class AutoPromoter implements Runnable {
                 .withResultCode(PromoteResult.ResultCode.NoCandidateWithinDelayPeriod);
         }
 
-        //Get all deploys in preceded environment order by start dese
+        //Get all deploys in preceded environment order by start desc
         List<DeployBean> deployCandidates = getDeployCandidates(precededEnvBean.getEnv_id(),
             new Interval(startTime, endTime), maxCheckBuildsOrDeploys);
 

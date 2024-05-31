@@ -3,9 +3,9 @@
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
 # You may obtain a copy of the License at
-#  
+#
 #     http://www.apache.org/licenses/LICENSE-2.0
-#    
+#
 # Unless required by applicable law or agreed to in writing, software
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -26,7 +26,7 @@ class TestBuilds(unittest.TestCase):
         request1 = self._generate_request("build1", "commit-1")
         request2 = self._generate_request("build2", "commit-1")
         request3 = self._generate_request("build2", "commit-2", "branch-1")
-        request4 = self._generate_request("build3", "commit-3", "branch-2", "Github")
+        request4 = self._generate_request("build3", "commit-3", "branch-2", "GitHub")
 
         id1 = builds_helper.publish_build(commons.REQUEST, request1)['id']
         id2 = builds_helper.publish_build(commons.REQUEST, request2)['id']

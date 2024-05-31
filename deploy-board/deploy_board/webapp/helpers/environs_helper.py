@@ -53,7 +53,7 @@ OVERRIDE_POLICY_VALUES = ['OVERRIDE', 'WARN']
 
 DEPLOY_CONSTRAINT_TYPES = ['GROUP_BY_GROUP', 'ALL_GROUPS_IN_PARALLEL']
 
-# Fetch from backend to avoid maintainng at multiple places?
+# Fetch from backend to avoid maintaining at multiple places?
 STAGE_TYPES = ['DEFAULT', 'LATEST', 'DEV', 'STAGING', 'CANARY', 'CONTROL', 'PRODUCTION']
 
 deployclient = DeployClient()
@@ -272,9 +272,9 @@ def get_config_history(request, env_name, stage_name, index, size):
 
 
 def set_active_max_parallel(env):
-    max_parallel_pecentage = int(env['maxParallelPct'])
+    max_parallel_percentage = int(env['maxParallelPct'])
     env['showNumber'] = True
-    if max_parallel_pecentage > 0:
+    if max_parallel_percentage > 0:
         env['showNumber'] = False
 
 

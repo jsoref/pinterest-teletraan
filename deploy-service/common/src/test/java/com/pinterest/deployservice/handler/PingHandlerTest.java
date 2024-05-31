@@ -33,7 +33,7 @@ public class PingHandlerTest {
         Assert.assertEquals(2, PingHandler.getFinalMaxParallelCount(bean, 10));
         Assert.assertEquals(10, PingHandler.getFinalMaxParallelCount(bean, 100));
 
-        //Context maxParallelThershold set 
+        //Context maxParallelThreshold set 
         Assert.assertEquals(1, PingHandler.calculateParallelThreshold(bean, 2, 1), 1);
         Assert.assertEquals(10, PingHandler.calculateParallelThreshold(bean, 2, 1), 10);
         Assert.assertEquals(10, PingHandler.calculateParallelThreshold(bean, 2, 1), 100);

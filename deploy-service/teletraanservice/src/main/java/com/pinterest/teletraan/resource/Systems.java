@@ -117,6 +117,6 @@ public class Systems {
         for (String chatroom : chatrooms) {
             chatManager.send(request.getFrom(), chatroom.trim(), request.getMessage(), "yellow");
         }
-        LOG.info("Successfully handled send message requset {}", request);
+        LOG.info("Successfully handled send message request {}", request);
     }
 }

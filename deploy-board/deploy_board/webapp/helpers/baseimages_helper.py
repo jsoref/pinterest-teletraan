@@ -134,11 +134,11 @@ def get_latest_image_update_events(events):
 
     # Group update events batch by create_time.
     # Events are sorted by create_time 
-    # create_time is milisecond timestamp and gets increased by 1 per cluster.
+    # create_time is millisecond timestamp and gets increased by 1 per cluster.
     # The total number of clusters should not be 10K.
-    lastest_timestamp = events[0]['create_time']
+    latest_timestamp = events[0]['create_time']
     latest_events = [event for event in events if abs(
-        event['create_time'] - lastest_timestamp) < MAX_BASE_IMAGE_UPDATE_EVENTS]
+        event['create_time'] - latest_timestamp) < MAX_BASE_IMAGE_UPDATE_EVENTS]
 
     return latest_events
 

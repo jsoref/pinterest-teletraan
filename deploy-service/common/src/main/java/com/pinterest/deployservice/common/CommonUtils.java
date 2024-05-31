@@ -27,7 +27,7 @@ import java.text.SimpleDateFormat;
 
 public class CommonUtils {
     /**
-     * TODO figure out how to use guava to achive this
+     * TODO figure out how to use guava to achieve this
      *
      * @return base64 encoded shorten UUID, e.g. 11YozyYYTvKmuUXpRDvoJA
      */
@@ -81,7 +81,7 @@ public class CommonUtils {
 
     public static String determineScm(String repo) {
         if(repo.contains("/")) {
-            return "Github";
+            return "GitHub";
         }
         else {
             return "Phabricator";

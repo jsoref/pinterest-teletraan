@@ -58,7 +58,7 @@ public class RatingsHandler {
         }
     }
 
-    public boolean checkUserFeebackStatus(String user) throws Exception {
+    public boolean checkUserFeedbackStatus(String user) throws Exception {
         List<RatingBean> ratingBeans = ratingDAO.getRatingsByAuthor(user);
         if (ratingBeans.size() > 0) {
             // Get most recent feedback identifier

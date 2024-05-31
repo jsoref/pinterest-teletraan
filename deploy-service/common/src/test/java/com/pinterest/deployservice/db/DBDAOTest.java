@@ -1041,8 +1041,8 @@ public class DBDAOTest {
         TagBean tag2 = tagDAO.getById(tag.getId());
         assertNotNull(tag2);
         assertEquals(tag.getTarget_id(), tag2.getTarget_id());
-        BuildBean embededBean = tag2.deserializeTagMetaInfo(BuildBean.class);
-        assertEquals("b-3", embededBean.getBuild_id());
+        BuildBean embeddedBean = tag2.deserializeTagMetaInfo(BuildBean.class);
+        assertEquals("b-3", embeddedBean.getBuild_id());
 
         List<TagBean> targetList = tagDAO.getByTargetId(tag.getTarget_id());
         assertEquals(1, targetList.size());

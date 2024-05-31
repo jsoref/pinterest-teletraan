@@ -4,7 +4,7 @@ To help reducing error when manually editing the Teletraan acl.yaml file, a Json
 
 ## Examples
 
-There are 3 provided examples under the *examples/* directory. If you open them in VSCode, you will see they are validated against the schema hosted on Github.
+There are 3 provided examples under the *examples/* directory. If you open them in VSCode, you will see they are validated against the schema hosted on GitHub.
 
 Alternatively, you can copy the schema to your local directory, and reference it like below.
 Note the first line `# yaml-language-server: $schema=teletraan_auth.yaml` is only supported in VSCode.

@@ -77,8 +77,8 @@
                     <base-image-help v-show="showBaseImageHelp" v-bind:data="baseImageHelpData"></base-image-help>
                     <hosttype-select label="Host Type" title="Compute Capability of the host" v-model="selectedHostTypeValue" v-bind:selectoptions="hostTypeOptions" selectsearch="true"
                     showhelp="true" v-on:helpclick="hostTypeHelpClick"></hosttype-select>
-                    <hostype-help v-show="showHostTypeHelp" v-bind:data="hostTypeHelpData"></hostype-help>
-                    <label-select label="Security Zone" title="Security zone to control inbound/outboud traffic" v-model="selectedSecurityZoneValue" v-bind:selectoptions="securityZones"
+                    <hosttype-help v-show="showHostTypeHelp" v-bind:data="hostTypeHelpData"></hosttype-help>
+                    <label-select label="Security Zone" title="Security zone to control inbound/outbound traffic" v-model="selectedSecurityZoneValue" v-bind:selectoptions="securityZones"
                     showhelp="true" v-on:helpclick="securityZoneHelpClick"></label-select>
                     <securityzone-help v-show="showSecurityZoneHelp" v-bind:data="securityZoneHelpData"></securityzone-help>
                     <placements-select label="Placements" title="Placements" showsubnettype="true" v-bind:selectoptions="placements" v-bind:assignpublicip="assignPublicIP" v-bind:subnettype="subnetType"
@@ -253,7 +253,7 @@
          var normalizedData = chart.data.series;
 
 
-          // Add column headers inclusing the series column header for the row headers
+          // Add column headers including the series column header for the row headers
           [options.seriesHeader].concat(chart.data.labels).forEach(function (text) {
             firstRow
               .elem('th', {
@@ -619,10 +619,10 @@
                 },
                 getHelpInfo: function(path, onSuccess, params){
                     const searchParams = new URLSearchParams(params);
-                    const seachParamStr = params != null ? `?${searchParams}` : '';
+                    const searchParamStr = params != null ? `?${searchParams}` : '';
                     $.ajax({
                         type: 'GET',
-                        url: `${location.protocol}//${location.host}/clouds/${path}/${seachParamStr}`,
+                        url: `${location.protocol}//${location.host}/clouds/${path}/${searchParamStr}`,
                         dataType: "json",
                         beforeSend: function(xhr, settings) {
                             var csrftoken = getCookie('csrftoken')
@@ -944,7 +944,7 @@
                     // It's really just update cluster info config without capacity
                     //Create the default capacity. The input here aligns to the Rodimus new cluster
                     var clusterInfo = {};
-                    clusterInfo['accountId'] = this.currentAccoundId;
+                    clusterInfo['accountId'] = this.currentAccountId;
                     clusterInfo['capacity'] = this.capacity;
                     clusterInfo['provider'] = this.currentProvider;
                     clusterInfo['cellName'] = this.currentCell;
