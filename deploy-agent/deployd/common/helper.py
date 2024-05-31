@@ -50,7 +50,7 @@ class Helper(object):
     def get_build_name(filename: str) -> str:
         """
         Extract build name from the file name
-        In downloader.py, we have the following name convenion
+        In downloader.py, we have the following name convention
              local_fn = u'{}-{}.{}'.format(self._build_name, self._build, extension)
         """
         fn_without_extension = filename.split('.')[0]
@@ -60,7 +60,7 @@ class Helper(object):
     def get_build_id(filename, env_name) -> Tuple[bool, Optional[str]]:
         """
         Extract build id from the file name
-        In downloader.py, we have the following name convenion
+        In downloader.py, we have the following name convention
              local_fn = u'{}-{}.{}'.format(self._build_name, self._build, extension)
         """
         prefix = "{0}-".format(env_name)
