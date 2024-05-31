@@ -24,7 +24,7 @@ public class DeployFilterBean {
     private List<String> operators;
     private List<DeployType> deployTypes;
     private List<DeployState> deployStates;
-    private List<AcceptanceStatus> acceptanceStatuss;
+    private List<AcceptanceStatus> acceptanceStatuses;
     private String commit;
     private String repo;
     private String branch;
@@ -67,12 +67,12 @@ public class DeployFilterBean {
         this.deployStates = deployStates;
     }
 
-    public List<AcceptanceStatus> getAcceptanceStatuss() {
-        return acceptanceStatuss;
+    public List<AcceptanceStatus> getAcceptanceStatuses() {
+        return acceptanceStatuses;
     }
 
-    public void setAcceptanceStatuss(List<AcceptanceStatus> acceptanceStatuss) {
-        this.acceptanceStatuss = acceptanceStatuss;
+    public void setAcceptanceStatuses(List<AcceptanceStatus> acceptanceStatuses) {
+        this.acceptanceStatuses = acceptanceStatuses;
     }
 
     public String getCommit() {

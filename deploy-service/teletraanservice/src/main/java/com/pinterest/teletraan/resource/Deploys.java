@@ -107,7 +107,7 @@ public class Deploys {
         @QueryParam("operator") List<String> operators,
         @QueryParam("deployType") List<DeployType> deployTypes,
         @QueryParam("deployState") List<DeployState> deployStates,
-        @QueryParam("acceptanceStatus") List<AcceptanceStatus> acceptanceStatuss,
+        @QueryParam("acceptanceStatus") List<AcceptanceStatus> acceptanceStatuses,
         @QueryParam("commit") String commit,
         @QueryParam("repo") String repo,
         @QueryParam("branch") String branch,
@@ -123,7 +123,7 @@ public class Deploys {
         filter.setOperators(operators);
         filter.setDeployTypes(deployTypes);
         filter.setDeployStates(deployStates);
-        filter.setAcceptanceStatuss(acceptanceStatuss);
+        filter.setAcceptanceStatuses(acceptanceStatuses);
         filter.setCommit(commit);
         filter.setRepo(repo);
         filter.setBranch(branch);

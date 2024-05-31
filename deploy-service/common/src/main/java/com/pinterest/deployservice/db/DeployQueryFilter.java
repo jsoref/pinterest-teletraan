@@ -102,7 +102,7 @@ public class DeployQueryFilter {
         sb = appendSubQuery(sb, "operator", filter.getOperators());
         sb = appendSubQueryEnum(sb, "deploy_type", filter.getDeployTypes());
         sb = appendSubQueryEnum(sb, "state", filter.getDeployStates());
-        sb = appendSubQueryEnum(sb, "acc_status", filter.getAcceptanceStatuss());
+        sb = appendSubQueryEnum(sb, "acc_status", filter.getAcceptanceStatuses());
         sb = appendSubQuery(sb, "scm_commit", filter.getCommit());
         sb = appendSubQuery(sb, "scm_repo", filter.getRepo());
         sb = appendSubQuery(sb, "scm_branch", filter.getBranch());
