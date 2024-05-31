@@ -42,7 +42,7 @@
 <div class="panel panel-default">
     {% if invalid_hotfix %}
     <div class="alert alert-warning" role="alert">
-        <strong>WARNNING</strong>: Current Deploy <a href="/deploy/{{ deploy.id }}">
+        <strong>WARNING</strong>: Current Deploy <a href="/deploy/{{ deploy.id }}">
         {{ deploy.id }}</a> is a <strong>{{ deploy.type }}</strong> deploy.
         Hotfix is NOT supported for such deploy type. Please find a REGULAR deploy in
         <a href="/env/{{ env.envName }}/{{ env.stageName }}/deploys">deploy history</a> page.
