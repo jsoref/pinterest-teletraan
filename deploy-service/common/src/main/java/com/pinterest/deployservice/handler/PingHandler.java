@@ -698,7 +698,7 @@ public class PingHandler {
                     LOG.debug("Checking if host {}, updateBean = {}, rate_limited = {}, system_priority = {} can deploy",
                                 hostName, updateBean, rate_limited, env.getSystem_priority());
                     // Request has hit LWM rate-limit. we already updated heartbeat. 
-                    // Next, see if we can handle light-weight deploys, instead of completly discarding request.
+                    // Next, see if we can handle light-weight deploys, instead of completely discarding request.
                     // Idea is, 
                     // 1. we want to continue in-progress deploy.
                     // 2. delay starting new deploy on the host(canDeploy call below is expensive for services with system priority).
