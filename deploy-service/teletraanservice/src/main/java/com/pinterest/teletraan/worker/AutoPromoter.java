@@ -349,7 +349,7 @@ public class AutoPromoter implements Runnable {
                 .withResultCode(PromoteResult.ResultCode.NoCandidateWithinDelayPeriod);
         }
 
-        //Get all deploys in preceded environment order by start dese
+        //Get all deploys in preceded environment order by start desc
         List<DeployBean> deployCandidates = getDeployCandidates(precededEnvBean.getEnv_id(),
             new Interval(startTime, endTime), maxCheckBuildsOrDeploys);
 
