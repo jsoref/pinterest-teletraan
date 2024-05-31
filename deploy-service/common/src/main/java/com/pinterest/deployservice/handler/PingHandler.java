@@ -307,7 +307,7 @@ public class PingHandler {
         }
 
         // Make sure we also follow the schedule if specified
-        if (!canDeploywithSchedule(envBean)) {
+        if (!canDeployWithSchedule(envBean)) {
             LOG.debug("Env {}: schedule does not allow host {} to proceed.", envId, host);
             return false;
         }
@@ -332,7 +332,7 @@ public class PingHandler {
                     return false;
                 }
                 // Make sure again we also follow the schedule if specified
-                if (!canDeploywithSchedule(envBean)) {
+                if (!canDeployWithSchedule(envBean)) {
                     LOG.debug("Env {}: schedule does not allow host {} to proceed.", envId, host);
                     return false;
                 }
@@ -443,7 +443,7 @@ public class PingHandler {
         }
     }
 
-    boolean canDeploywithSchedule(EnvironBean env) throws Exception {
+    boolean canDeployWithSchedule(EnvironBean env) throws Exception {
         String scheduleId = env.getSchedule_id();
         if (scheduleId == null) {
             return true;
