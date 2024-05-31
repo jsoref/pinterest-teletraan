@@ -62,7 +62,7 @@
                 </div>
                 <label-input label="Capacity" placeholder="# of instances" v-model="instanceCount"></label-input>
                 <hosttype-select label="Host Type" title="Compute Capability of the host" v-model="selectedHostTypeValue" v-bind:selectoptions="hostTypeOptions" selectsearch="true"></hosttype-select>
-                <label-select label="Security Zone" title="Security zone to control inbound/outboud traffic" v-model="selectedSecurityZoneValue" v-bind:selectoptions="securityZoneOptions"></label-select>
+                <label-select label="Security Zone" title="Security zone to control inbound/outbound traffic" v-model="selectedSecurityZoneValue" v-bind:selectoptions="securityZoneOptions"></label-select>
                 <placements-select label="Placements" title="Placements" v-bind:assignpublicip="assignPublicIP"
                 v-bind:selectoptions="placements" v-on:assignpublicipclick="selectpublicip"></placements-select>
                 <accessrole-input label="Access Role" title="access_role for host access" v-model="accessRole"

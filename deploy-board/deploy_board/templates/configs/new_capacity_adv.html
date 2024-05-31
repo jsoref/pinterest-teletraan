@@ -58,7 +58,7 @@
                     <hosttype-select label="Host Type" title="Compute Capability of the host" v-model="selectedHostTypeValue" v-bind:selectoptions="hostTypeOptions" selectsearch="true"
                     showhelp="true" v-on:helpclick="hostTypeHelpClick"></hosttype-select>
                     <hosttype-help v-show="showHostTypeHelp" v-bind:data="hostTypeHelpData"></hosttype-help>
-                    <label-select label="Security Zone" title="Security zone to control inbound/outboud traffic" showhelp="true" v-model="selectedSecurityZoneValue"
+                    <label-select label="Security Zone" title="Security zone to control inbound/outbound traffic" showhelp="true" v-model="selectedSecurityZoneValue"
                         v-bind:selectoptions="securityZones" v-on:helpclick="securityZoneHelpClick"></label-select>
                     <securityzone-help v-show="showSecurityZoneHelp" v-bind:data="securityZoneHelpData"></securityzone-help>
                     <placements-select label="Placements" title="Placements" v-bind:selectoptions="placements" v-bind:assignpublicip="assignPublicIP"
