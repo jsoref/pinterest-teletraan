@@ -656,7 +656,7 @@ public class GoalAnalyst {
          */
         if (env != null && report != null) {
             // In case the current deploy is a rollback, & reported deploy happens to be the
-            // deploy we are rollbacking to, need to user deploy alias instead
+            // deploy we are rolling back to, need to user deploy alias instead
             transformRollbackDeployId(env, report, updateBean);
             AgentBean newUpdateBean;
 
