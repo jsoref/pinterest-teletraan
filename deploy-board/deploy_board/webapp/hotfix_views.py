@@ -26,7 +26,7 @@ from . import common
 DEFAULT_PAGE_SIZE = 30
 
 
-def _caculateLink(urlPattern, repo, commit):
+def _calculateLink(urlPattern, repo, commit):
     return urlPattern % (repo, commit)
 
 
@@ -35,7 +35,7 @@ def _create_commits(commits, urlPattern, hotfix):
         fixed_commit = commit.strip()
         commit = {}
         commit["id"] = fixed_commit
-        commit["link"] = _caculateLink(urlPattern, hotfix['repo'], fixed_commit)
+        commit["link"] = _calculateLink(urlPattern, hotfix['repo'], fixed_commit)
         commits.append(commit)
 
 
