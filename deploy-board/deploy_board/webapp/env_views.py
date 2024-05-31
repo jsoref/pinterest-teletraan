@@ -1481,7 +1481,7 @@ def reset_all_environments(request, name, stage, host_id):
     return redirect('/env/{}/{}/'.format(name, stage))
 
 
-# pause deploy for this this env, this host
+# pause deploy for this env, this host
 def pause_deploy(request, name, stage, host_id):
     agents_helper.pause_deploy(request, name, stage, host_id)
     return HttpResponse(json.dumps({'html': ''}), content_type="application/json")
