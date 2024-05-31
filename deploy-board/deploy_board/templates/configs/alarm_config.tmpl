@@ -1,5 +1,5 @@
 {% load utils %}
-<form id="alarmFormlId" class="form-horizontal" method="post"
+<form id="alarmFormId" class="form-horizontal" method="post"
     action="/env/{{ env.envName }}/{{ env.stageName }}/config/alarm/" role="form">
 {% csrf_token %}
 
@@ -90,7 +90,7 @@
         $('#saveConfigMapBtnId').attr('disabled','disabled');
         $('#resetConfigMapBtnId').attr('disabled','disabled');
 
-        $('#alarmFormlId input').keyup(function() {
+        $('#alarmFormId input').keyup(function() {
             $('#saveConfigMapBtnId').removeAttr('disabled');
             $('#resetConfigMapBtnId').removeAttr('disabled');
         });
@@ -135,7 +135,7 @@
             $.ajax({
                 type: 'POST',
                 url: '/env/{{ env.envName }}/{{ env.stageName }}/config/alarm/',
-                data: $('#alarmFormlId').serialize(),
+                data: $('#alarmFormId').serialize(),
                 dataType: 'json',
                 beforeSend: function () {
                     btn.button('loading');
@@ -145,7 +145,7 @@
                         $('#errorBannerId').append(data.error);
                         $('#errorBannerId').show();
                     } else {
-                        $('#alarmFormlId').parent().html(data.html);
+                        $('#alarmFormId').parent().html(data.html);
                         $('#errorBannerId').empty().hide();
                     }
                     btn.button('reset');
@@ -167,12 +167,12 @@
                 },
                 success: function (data) {
                     btn.button('reset');
-                    $('#alarmFormlId').parent().html(data.html);
+                    $('#alarmFormId').parent().html(data.html);
                 }
             });
         });
 
-        $('#alarmFormlId').on('click', '.deleteBtn', function () {
+        $('#alarmFormId').on('click', '.deleteBtn', function () {
             $(this).parent().parent().parent().remove();
             $('#saveConfigMapBtnId').removeAttr('disabled');
             $('#resetConfigMapBtnId').removeAttr('disabled');
