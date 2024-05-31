@@ -23,10 +23,10 @@ public class GithubManagerTest {
         String urlPrefix = "https://github.com";
         String appId = "yourAppId";
         String appPrivateKeyKnox = "";
-        String appOrgnization = "yourOrg";
+        String appOrganization = "yourOrg";
         String token = "";   // github personal token
         
-        this.manager = new GithubManager(token, appId, appPrivateKeyKnox, appOrgnization, typeName, apiPrefix, urlPrefix);
+        this.manager = new GithubManager(token, appId, appPrivateKeyKnox, appOrganization, typeName, apiPrefix, urlPrefix);
         Assert.assertEquals(this.manager.getUrlPrefix(), urlPrefix);
     }
 
