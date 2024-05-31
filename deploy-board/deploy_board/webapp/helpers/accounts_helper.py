@@ -23,7 +23,7 @@ def get_by_cell_and_id(request, cell, account_id, provider="AWS"):
         return rodimus_client.get(f"/accounts/{provider}/{cell}/{account_id}", request.teletraan_user_id.token)
     except Exception as e:
         log.error(f"Can't get account by cell and account_id: "
-                  f"provder = {provider}, cell = {cell}, account_id = {account_id}, error = {e}")
+                  f"provider = {provider}, cell = {cell}, account_id = {account_id}, error = {e}")
         # return None for backward-compatibility
         return None
 
