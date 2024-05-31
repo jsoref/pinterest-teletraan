@@ -47,10 +47,10 @@ public interface DeployDAO {
     List<DeployBean> getAcceptedDeploys(String envId, Interval interval, int size) throws Exception;
 
 
-    // Return ACCEPTED deploy whose suc_date is before before and build publish time is after after
+    // Return ACCEPTED deploy whose suc_date is before and build publish time is after after
     List<DeployBean> getAcceptedDeploysDelayed(String envId, Interval interval) throws Exception;
 
-    // Return upto size number of ACCEPTED deploy whose suc_date is before before and build publish time is after after
+    // Return upto size number of ACCEPTED deploy whose suc_date is before and build publish time is after after
     Long countNonRegularDeploys(String envId, long after) throws Exception;
 
     // Update state, and other colums, if only if state == currentState
