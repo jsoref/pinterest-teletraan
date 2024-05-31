@@ -197,12 +197,12 @@ var capacitySetting = new Vue({
                 return {
                     value: item.abstract_name,
                     text: item.abstract_name,
-                    isSelected: item.abstract_name === info.defaultSeurityZone
+                    isSelected: item.abstract_name === info.defaultSecurityZone
                 }
             }),
         // TODO: The default host type comes from settings and should probably not be an abstract_name since they are not guaranteed to be unique.
         selectedHostTypeValue: hostTypes.getSelectedId(),
-        selectedSecurityZoneValue: info.defaultSeurityZone,
+        selectedSecurityZoneValue: info.defaultSecurityZone,
         selectedPlacements: [],
         showBaseImageHelp: false,
         showHostTypeHelp: false,

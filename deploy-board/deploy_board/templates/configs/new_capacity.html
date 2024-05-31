@@ -119,12 +119,12 @@ var capacitySetting = new Vue({
             return {
                 value:item.abstract_name,
                 text:item.abstract_name+" ("+item.description+")",
-                isSelected: item.abstract_name === capacityCreationInfo.defaultSeurityZone
+                isSelected: item.abstract_name === capacityCreationInfo.defaultSecurityZone
             }
         }),
         // TODO: The default host type comes from settings and should probably not be an abstract_name since they are not guaranteed to be unique.
         selectedHostTypeValue: hostTypes.getSelectedId(),
-        selectedSecurityZoneValue: capacityCreationInfo.defaultSeurityZone,
+        selectedSecurityZoneValue: capacityCreationInfo.defaultSecurityZone,
         selectedPlacements: null,
         accessRole: localStorage.getItem("accessRole") ? localStorage.getItem("accessRole") : capacityCreationInfo.defaultCMPConfigs['access_role'],
         showAccessRoleHelp: false,
