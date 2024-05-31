@@ -274,7 +274,7 @@ Vue.component('modal', {
 });
 
 /**
- * The collapseable panel heading
+ * The collapsible panel heading
  */
 Vue.component("panel-heading", {
   template: '<div class="panel-heading clearfix">\
