@@ -37,7 +37,7 @@ class TestServerlessClient(TestCase):
         report = PingReport()
         report.envName = self.env_name
         report.stageName = self.stage
-        report.erroCode = 0
+        report.errorCode = 0
         report.envId  = self.env_id
         report.deployStage = None
         report.status = AgentStatus.SUCCEEDED
