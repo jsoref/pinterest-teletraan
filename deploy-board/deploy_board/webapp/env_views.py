@@ -682,7 +682,7 @@ def _get_commit_info(request, commit, repo=None, branch='master'):
         return build['repo'], build['branch'], build['commitDate']
 
     if not repo:
-        # Without repo, we can not call github api, return None
+        # Without repo, we cannot call github api, return None
         log.error("Repo is expected when query based on commit which has no build")
         return None, None, None
 
@@ -1073,7 +1073,7 @@ def post_add_stage(request, name):
     all_envs_stages = environs_helper.get_all_env_stages(request, name)
     stages, _ = common.get_all_stages(all_envs_stages, None)
     if from_stage and from_stage not in stages:
-        raise Exception("Can not clone from non-existing stage!")
+        raise Exception("Cannot clone from non-existing stage!")
 
     external_id = None
     if from_stage:

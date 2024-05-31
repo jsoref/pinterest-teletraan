@@ -415,7 +415,7 @@ public class PingHandler {
             LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} waiting for deploy, current {} deploying hosts",
                 envId, tagName, tagValue, hostId, totalActiveAgentsWithHostTag);
             if (totalActiveAgentsWithHostTag >= maxParallelWithHostTag) {
-                LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} can not deploy, {} already exceed {} for constraint = {}, return false",
+                LOG.info("DeployWithConstraint env {} with tag {}:{} : host {} cannot deploy, {} already exceed {} for constraint = {}, return false",
                     envId, tagName, tagValue, hostId, totalActiveAgentsWithHostTag, maxParallelWithHostTag, deployConstraintBean.toString());
                 return false;
             }
@@ -427,7 +427,7 @@ public class PingHandler {
                     long totalExistingHostsWithPrerequisiteTags = hostTagDAO.countHostsByEnvIdAndTags(envBean.getEnv_id(), tagName, prerequisiteTagValues);
                     long totalFinishedAgentsWithPrerequisiteTags = agentDAO.countFinishedAgentsByDeployWithHostTags(envBean.getEnv_id(), envBean.getDeploy_id(), tagName, prerequisiteTagValues);
                     if(totalFinishedAgentsWithPrerequisiteTags < totalExistingHostsWithPrerequisiteTags) {
-                        LOG.info("DeployWithConstraint env {} with tag {}:{} : prerequisite tags {} has not finish: finished {} < existing {}, host {} can not deploy.",
+                        LOG.info("DeployWithConstraint env {} with tag {}:{} : prerequisite tags {} has not finish: finished {} < existing {}, host {} cannot deploy.",
                             envId, tagName, tagValue, prerequisiteTagValues, totalFinishedAgentsWithPrerequisiteTags, totalExistingHostsWithPrerequisiteTags, hostId);
                         return false;
                     }

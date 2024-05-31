@@ -89,7 +89,7 @@ public class DeployHandler implements DeployHandlerInterface{
         + "\"nimbus_uuid\":\"%s\"}";
     private static final String COMPARE_DEPLOY_URL = "https://deploy.pinadmin.com/env/%s/%s/compare_deploys_2/?chkbox_1=%s&chkbox_2=%s";
 
-    static final String ERROR_EMPTY_BUILD_ID = "Build id can not be empty.";
+    static final String ERROR_EMPTY_BUILD_ID = "Build id cannot be empty.";
     static final String ERROR_BUILD_NAME_NOT_MATCH_STAGE_CONFIG = "Build name (%s) does not match stage config (%s).";
     static final String ERROR_NON_PRIVATE_UNTRUSTED_LOCATION = "Non-private build url points to an untrusted location (%s)."
             + " Please Contact #teletraan to ensure the build artifact is published to a trusted url.";
@@ -489,7 +489,7 @@ public class DeployHandler implements DeployHandlerInterface{
         // TODO: Should get by id and type ?
         TagBean tagBean = tagDAO.getLatestByTargetId(envBean.getEnv_id());
         if (tagBean != null && tagBean.getValue() == TagValue.DISABLE_ENV) {
-            throw new DeployInternalException(String.format("Can not promote to a disabled env %s/%s",
+            throw new DeployInternalException(String.format("Cannot promote to a disabled env %s/%s",
                     envBean.getEnv_name(), envBean.getStage_name()));
         }
 
